@@ -28,7 +28,7 @@ def addPage(f):
     print(r'\begin{tabular}{lll}', file=f)
     eq_list = []
     for i in range(0, 51):
-        a, b, oper = equGenerator([1, 20], [1, 20], [0, 20], 'r')
+        a, b, oper = equGenerator([1, 50], [1, 50], [0, 50], '-')
         if(oper==1):
             eq = str(a)+" + "+str(b)+" = \_\_\_~~"
             eq_list.append(eq)
@@ -52,7 +52,7 @@ def main():
     print(r'\huge', file=f)
     print(r'\begin{center}', file=f)
 
-    for i in range(0, 10):
+    for i in range(0, 50):
         addPage(f)
 
     print(r'\end{center}', file=f)
